@@ -1,0 +1,15 @@
+water:
+  description: water
+  value: 4
+
+food:
+  description: food
+  value: 3
+
+medication:
+  description: medication
+  value: 2
+
+ammunition:
+  description: ammunition
+  value: 1

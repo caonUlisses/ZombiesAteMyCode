@@ -12,7 +12,7 @@ class PeopleController < ApplicationController
   end
 
   api :GET, 'people/id', 'Show a healthy person'
-  param :id, :number, desc: 'Id of the healthy person'
+  param :id, String, desc: 'Id of the healthy person'
   def show
     render json: @person
   end

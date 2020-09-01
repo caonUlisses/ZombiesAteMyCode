@@ -34,4 +34,8 @@ group :test do
   gem 'faker'
 end
 
+# "The best open-source database engine!", or so they said
 gem "pg", "~> 0.21.0"
+
+# Let's keep docs for the survivors
+gem "apipie-rails"

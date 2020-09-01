@@ -4,16 +4,24 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: %i[show update destroy]
 
+  api :GET, 'people', 'List healthy people'
   def index
     @people = Person.all
 
     render json: @people
   end
 
+  api :GET, 'people/id', 'Show a healthy person'
+  param :id, :number, desc: 'Id of the healthy person'
   def show
     render json: @person
   end
 
+  api :POST, 'people', 'Register a healthy person'
+  param :name, String, desc: 'Person\'s name'
+  param :age, :number, desc: 'Age in years'
+  param :gender, :number, desc: '0 for male, 1 for female'
+  param :last_location, Hash, desc: 'Locatoin with latitude and longitude'
   def create
     @person = Person.new(person_params)
 

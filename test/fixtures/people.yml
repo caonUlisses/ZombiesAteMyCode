@@ -1,0 +1,27 @@
+person_one:
+  name: <%= Faker::Name.name %>
+  age: <%= Faker::Number.between(from: 1, to: 120) %>
+  gender: <%= Faker::Number.between(from: 1, to: 2) %>
+  last_location: <%= [ Faker::Address.latitude, Faker::Address.longitude ] %>
+  infected: 0
+
+person_two:
+  name: <%= Faker::Name.name %>
+  age: <%= Faker::Number.between(from: 1, to: 120) %>
+  gender: <%= Faker::Number.between(from: 1, to: 2) %>
+  last_location: <%= [ Faker::Address.latitude, Faker::Address.longitude ] %>
+  infected: 0
+
+zombie_one:
+  name: <%= Faker::Name.name %>
+  age: <%= Faker::Number.between(from: 1, to: 120) %>
+  gender: <%= Faker::Number.between(from: 1, to: 2) %>
+  last_location: <%= [Faker::Address.latitude, Faker::Address.longitude] %>
+  infected: 1
+
+zombie_two:
+  name: <%= Faker::Name.name %>
+  age: <%= Faker::Number.between(from: 1, to: 120) %>
+  gender: <%= Faker::Number.between(from: 1, to: 2) %>
+  last_location: <%= [Faker::Address.latitude, Faker::Address.longitude] %>
+  infected: 1

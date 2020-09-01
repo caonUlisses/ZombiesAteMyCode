@@ -1,19 +1,19 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= Rails.application.credentials.dig(:postgres, :user) %>
-  password: <%= Rails.application.credentials.dig(:postgres, :password) %>
-  host: <%= Rails.application.credentials.dig(:postgres, :host) %>
+  pool: 5
+  username: human
+  password: brain
+  host: localhost
   timeout: 5000
 
 development:
   <<: *default
-  database: <%= Rails.application.credentials.dig(:postgres, :database) %>
+  database: human
 
 test:
   <<: *default
-  database: <%= Rails.application.credentials.dig(:postgres, :test_database) %>
+  database: zombie
 
 production:
   <<: *default

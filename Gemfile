@@ -16,7 +16,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Keep things in order
   gem 'rubocop'
   # Keep things secure
@@ -35,7 +35,7 @@ group :test do
 end
 
 # "The best open-source database engine!", or so they said
-gem "pg", "~> 0.21.0"
+gem 'pg', '~> 0.21.0'
 
 # Let's keep docs for the survivors
-gem "apipie-rails"
+gem 'apipie-rails'

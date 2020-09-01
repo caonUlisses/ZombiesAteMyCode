@@ -12,8 +12,8 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create person' do
     assert_difference('Person.count') do
-      post people_url, params: { 
-        person: { 
+      post people_url, params: {
+        person: {
           age: @person.age,
           gender: @person.gender,
           infected: @person.infected,

@@ -5,12 +5,12 @@ class ResourcesControllerTest < ActionDispatch::IntegrationTest
     @resource = resources(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get resources_url, as: :json
     assert_response :success
   end
 
-  test "should show resource" do
+  test 'should show resource' do
     get resource_url(@resource), as: :json
     assert_response :success
   end

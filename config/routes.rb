@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :resources
   apipie
+  resources :resources
   resources :people
+  resources :inventories
 end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PersonTest < ActiveSupport::TestCase
   test 'a person should be registered as healthy' do
-    person = Person.new()
+    person = Person.new
 
     assert_equal person.healthy?, true
   end
@@ -16,9 +16,9 @@ class PersonTest < ActiveSupport::TestCase
     first_location = person.last_location
 
     person.update!(last_location: [
-      Faker::Address.latitude,
-      Faker::Address.longitude
-    ])
+                     Faker::Address.latitude,
+                     Faker::Address.longitude
+                   ])
 
     assert_not_equal first_location, person.last_location
   end

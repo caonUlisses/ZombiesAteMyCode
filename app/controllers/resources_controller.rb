@@ -1,5 +1,4 @@
 class ResourcesController < ApplicationController
-
   api :GET, 'resources', 'List resources and its pricing'
   def index
     @resources = Resource.all

@@ -8,7 +8,7 @@ Our domain is pretty simple, so shall be our code!
 
 For those who want to contribute, follow below:
 
-### Keep the models safe!
+#### Keep the models safe!
 
 This is a goold-old boring rails app, following the moto **'Fat models, skinny controllers'**.
 Zombies like some meat, so by keeping the outer layer (controllers) skinny, we keep our fat models safe.
@@ -18,6 +18,11 @@ Zombies like some meat, so by keeping the outer layer (controllers) skinny, we k
 Whenever a model gets too fat, break it down (don't you dare just moving some methods to a module).
 Do so by extracting value and service objects.
 Our time is nye, so don't over over-engineer.
+
+#### Avoid collision!
+
+We may loose connection soon, so keep on using **UUIDs as primary keys**. 
+If we need to go offline, a synchronization service will be as easy as pie.
 
 ## See it live!
 

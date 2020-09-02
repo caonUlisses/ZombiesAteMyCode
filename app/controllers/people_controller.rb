@@ -49,7 +49,9 @@ class PeopleController < ApplicationController
   end
 
   def person_params
-    params.require(:person).permit(:name, :age, :gender, :last_location)
+    params
+      .require(:person)
+      .permit(:name, :age, :gender, :last_location, inventories_attributes: %i[resource_id quantity])
   end
 
   def location_params

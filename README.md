@@ -22,7 +22,7 @@ Our time is nye, so don't over over-engineer.
 #### Avoid collision!
 
 We may loose connection soon, so keep on using **UUIDs as primary keys**. 
-If we need to go offline, a synchronization service will be as easy as pie.
+When offline, keeping things in sync without UUIDS is madness!!1!
 
 ## See it live!
 
@@ -33,10 +33,14 @@ You can find the documentation at `/docs`
 
 ## Testing
 
-Using [httpie](https://httpie.org/) will make your life easier.
+Alright, the `/docs` didn't make you happy and you're in a hush, I get it!
+Navigate do `examples` and you'll find a lot of examples redy for use!
+
+> Pro tip: Using [httpie](https://httpie.org/) will make your life easier.
 
 ## Running locally
 
 You'll need [docker](https://www.docker.com/) and ruby 2.7.1.
 
 Docker is there so you can isolate [postgresql](https://www.postgresql.org/) from your system and avoid [breaking dev and prod parity](https://12factor.net/).
+Ruby is installed locally for development ergonomics/hapiness.

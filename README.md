@@ -22,3 +22,16 @@ Our time is nye, so don't over over-engineer.
 ## See it live!
 
 Not right now
+
+## Documentation
+You can find the documentation at `/docs`
+
+## Testing
+
+Using [httpie](https://httpie.org/) will make your life easier.
+
+## Running locally
+
+You'll need [docker](https://www.docker.com/) and ruby 2.7.1.
+
+Docker is there so you can isolate [postgresql](https://www.postgresql.org/) from your system and avoid [breaking dev and prod parity](https://12factor.net/).

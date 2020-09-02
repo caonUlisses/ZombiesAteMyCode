@@ -26,6 +26,16 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
     assert_response 201
   end
 
+  test 'should be able to update its location' do
+    put location_person_url(@person), params: {
+      person: {
+        last_location: [0,0]
+      }
+    }, as: :json
+
+    assert_response 200
+  end
+
   test 'should show person' do
     get person_url(@person), as: :json
     assert_response :success

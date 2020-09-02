@@ -1,0 +1,8 @@
+one:
+  flagger: person_one
+  flagged: person_four
+
+two:
+  flagger: person_two
+  flagged: person_four
+

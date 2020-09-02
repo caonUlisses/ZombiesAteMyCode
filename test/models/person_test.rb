@@ -28,4 +28,10 @@ class PersonTest < ActiveSupport::TestCase
 
     assert_equal people(:person_one).infected?, true
   end
+
+  test "a person should have its inventory on registration" do
+    person = people(:person_one)
+
+    assert_equal person.resources.count, 1
+  end
 end

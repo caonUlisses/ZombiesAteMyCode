@@ -2,7 +2,7 @@
 
 # The controller for the people, be it infected or not
 class PeopleController < ApplicationController
-  before_action :set_person, only: %i[show update destroy]
+  before_action :set_person, only: %i[show location]
 
   api :GET, 'people', 'List healthy people'
   def index
@@ -32,6 +32,16 @@ class PeopleController < ApplicationController
     end
   end
 
+  api :PUT, 'person/id', 'Update someones location'
+  param :last_location, Hash, desc: 'Locatoin with latitude and longitude'
+  def location
+    if @person.update(location_params)
+      render json: @person
+    else
+      render json: @person.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def set_person
@@ -40,5 +50,9 @@ class PeopleController < ApplicationController
 
   def person_params
     params.require(:person).permit(:name, :age, :gender, :last_location)
+  end
+
+  def location_params
+    params.require(:person).permit(:last_location)
   end
 end

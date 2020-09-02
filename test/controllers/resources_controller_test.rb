@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ResourcesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @resource = resources(:one)
+    @resource = resources(:water)
   end
 
   test 'should get index' do

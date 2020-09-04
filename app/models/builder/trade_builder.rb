@@ -24,7 +24,7 @@ class Builder::TradeBuilder
   def set_sent_items(items)
     @trade.sent_items = items
 
-    if @trade.sender.totalize(resource_ids(items)) <= @trade.sent_points
+    if @trade.sender.totalize(resource_ids(items)) < @trade.sent_points
       raise 'Sender is lacking resources'
     end
 
@@ -34,7 +34,7 @@ class Builder::TradeBuilder
   def set_received_items(items)
     @trade.received_items = items
 
-    if @trade.receiver.totalize(resource_ids(items)) <= @trade.received_points
+    if @trade.receiver.totalize(resource_ids(items)) < @trade.received_points
       raise 'Receiver is lacking resources'
     end
 

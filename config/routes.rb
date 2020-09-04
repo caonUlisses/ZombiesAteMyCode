@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   post :trades, to: 'trades#trade'
   resources :inventories
 
-  root 'people#index'
+  root 'apipie/apipies#index'
 end

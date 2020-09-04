@@ -14,10 +14,21 @@ class Person < ApplicationRecord
     confirmed! if flags.count >= Person::FLAG_LIMIT
   end
 
-  def send(ids, quantity)
+  def withdraw(resource_id, quantity)
+    inventory = inventories.where(resource_id: resource_id).first
+    inventory.quantity -= quantity
+    return inventory.save if inventory.quantity > 0
+
+    inventory.destroy!
   end
 
-  def receive(received_resources, quantity)
+  def receive(resource_id, quantity)
+    inventory = inventories.where(resource_id: resource_id).first
+
+    return inventories.create(resource_id: resource_id, quantity: quantity) if !inventory.present?
+
+    inventory.quantity += quantity
+    inventory.save
   end
 
   def totalize(resource_ids)

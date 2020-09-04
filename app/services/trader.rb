@@ -47,7 +47,7 @@ class Trader
     @trade.sent_points === @trade.received_points
   end
 
-  def process(exchange)
+  def process(trade)
     ActiveRecord::Base.transaction do
       trade.send
       trade.receive

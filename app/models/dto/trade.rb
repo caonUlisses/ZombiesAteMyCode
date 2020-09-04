@@ -15,13 +15,13 @@ class Dto::Trade
 
   def send
     sent_items.each do |item|
-      sender.send(item.resource, item.quantity)
+      sender.withdraw(item.id, item.quantity)
     end
   end
 
   def receive
     received_items.each do |item|
-      receiver.send(item.resource, item.quantity)
+      receiver.receive(item.id, item.quantity)
     end
   end
 

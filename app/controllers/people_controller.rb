@@ -83,6 +83,7 @@ class PeopleController < ApplicationController
   end
 
   def validate_params
+    return if params[:inventories_attributes].empty?
     if negative
       raise 'Invalid inventory quantity'
     end

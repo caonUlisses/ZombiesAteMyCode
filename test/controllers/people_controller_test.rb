@@ -18,8 +18,12 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
           gender: @person.gender,
           infected: @person.infected,
           last_location: @person.last_location,
-          name: @person.name
-        }
+          name: @person.name,
+        },
+        inventories_attributes: [{
+          resource_id: resources(:water).id,
+          quantity: 1
+        }]
       }, as: :json
     end
 

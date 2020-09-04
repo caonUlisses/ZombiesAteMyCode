@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :people do
     put :location, on: :member
   end
+  post :trades, to: 'trades#trade'
   resources :inventories
+
+  root 'people#index'
 end

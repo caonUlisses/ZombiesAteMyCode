@@ -13,4 +13,14 @@ class Person < ApplicationRecord
   def health_check
     confirmed! if flags.count >= Person::FLAG_LIMIT
   end
+
+  def send(ids, quantity)
+  end
+
+  def receive(received_resources, quantity)
+  end
+
+  def totalize(resource_ids)
+    Inventory.totalize(id, resource_ids)
+  end
 end

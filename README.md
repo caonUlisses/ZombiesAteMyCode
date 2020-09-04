@@ -30,10 +30,6 @@ Run `rails test` and see everything passing;
 
 Also, you may run `rubycritic`. Currently, the score is at **98/100**. Keep it over 90!
 
-## See it live!
-
-Not right now
-
 ## Documentation
 You can find the documentation at `/docs`
 

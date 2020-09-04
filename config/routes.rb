@@ -9,4 +9,12 @@ Rails.application.routes.draw do
   resources :inventories
 
   root 'apipie/apipies#index'
+
+  scope '/reports' do
+    get :infected_percentage, controller: :reports
+    get :healthy_percentage, controller: :reports
+    get :lost_points, controller: :reports
+    get :current_position, controller: :reports
+    get :average_resources, controller: :reports
+  end
 end

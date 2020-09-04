@@ -21,6 +21,8 @@ group :development, :test do
   gem 'rubocop'
   # Keep things secure
   gem 'brakeman'
+  # Keep things good
+  gem 'rubycritic', require: false
 end
 
 group :development do

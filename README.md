@@ -24,6 +24,12 @@ Our time is nye, so don't over over-engineer.
 We may loose connection soon, so keep on using **UUIDs as primary keys**. 
 When offline, keeping things in sync without UUIDS is madness!!1!
 
+#### Validating
+
+Run `rails test` and see everything passing;
+
+Also, you may run `rubycritic`. Currently, the score is at **98/100**. Keep it over 90!
+
 ## See it live!
 
 Not right now

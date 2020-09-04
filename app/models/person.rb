@@ -34,4 +34,12 @@ class Person < ApplicationRecord
   def totalize(resource_ids)
     Inventory.totalize(id, resource_ids)
   end
+
+  def self.healthy_total
+    Person.healthy.count
+  end
+
+  def self.zombie_total
+    Person.confirmed.count
+  end
 end

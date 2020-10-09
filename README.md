@@ -42,7 +42,7 @@ Navigate do `examples` and you'll find a lot of examples redy for use!
 
 ## Running locally
 
-You'll need Ruby v1.7.1 and some postgresql installation.
+You'll need Ruby v2.7.1 and some postgresql installation.
 
 For ease of use, there's a `docker-compose.yml` for [docker](https://www.docker.com/), so you can isolate [postgresql](https://www.postgresql.org/) from your system and avoid [breaking dev and prod parity](https://12factor.net/).
 
